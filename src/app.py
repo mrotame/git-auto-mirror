@@ -35,7 +35,7 @@ class App():
     def baixarTodasAsBranches(self, repo: Repo)->None:
         for b in repo.remote().fetch():
             repo.git.checkout('-B', b.name.split('/')[1], b.name)
-        repo.git.checkout(self.reposInfo.repo_master['settings']['main_branch_name'])
+        #repo.git.checkout(self.reposInfo.repo_master['settings']['main_branch_name'])
 
     def verificaSeGitJaExiste(self, caminho:os.path)->bool:
         try:
