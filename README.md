@@ -37,10 +37,11 @@ The file must be filled in as follows:
     [my-awesome-custom-git-server]
     url = 'https://username:password@url_from_slave_01_git_repository'
     
-the DEFAULT carries the url from the master git repository you will be pushing to.
-while the slaves after the DEFAULT is the gits that will receive the cloning.
+the DEFAULT carries the url from the master git repository you will be pushing to, while the slaves after the DEFAULT is the gits that will receive the cloning.
 Except for the DEFAULT, the names of the slaves doesnt matter at all, you can name as you want to.
-If you want to add more slaves, just insert it below, or if you want less, just remove what you will not be using
+
+If you want to add more slaves, just insert it below, and if you want less, just remove what you will not be using
+You can add as many git servers as you want (minimum of one, maximum of as many your machine can handle to process)
 
 to start the app, run the file *app.py* in *src/* directory
 
