@@ -27,13 +27,22 @@ The file must be filled in as follows:
 
     [DEFAULT]
     url = 'https://username:password@url_from_master_git_repository'
+       
+    [github-slave]
+    url = 'https://authToken@url_from_slave_02_git_repository
     
-    [slave01]
+    [bitbucket-slave]
+    url = 'https://username:password@url_from_slave_02_git_repository
+    
+    [my-awesome-custom-git-server]
     url = 'https://username:password@url_from_slave_01_git_repository'
     
-    [slave02]
-    url = 'https://authToken@url_from_slave_02_git_repository'
+the DEFAULT carries the url from the master git repository you will be pushing to.
+while the slaves after the DEFAULT is the gits that will receive the cloning.
+Except for the DEFAULT, the names of the slaves doesnt matter at all, you can name as you want to.
+If you want to add more slaves, just insert it below, or if you want less, just remove what you will not be using
 
 to start the app, run the file *app.py* in *src/* directory
 
     > python src/app.py
+The application will be running on loop, checking for new commits on the master repository, to replicate to the others
